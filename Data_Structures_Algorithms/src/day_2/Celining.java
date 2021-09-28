@@ -9,7 +9,7 @@ public class Celining {
 
         int[] arr= {-19,-11,-9,-3,1,5,11,14,17, 20, 21, 23, 29};
 
-        int target=-14;
+        int target=12;
         int ans=celining(arr,target);
         System.out.println(ans);
 
@@ -20,13 +20,16 @@ public class Celining {
         int start=0;
         int end =arr.length-1;
 
+        if(arr.length == 0 || target>arr[arr.length-1]){
+            return  -1;
+        }
         while(start<=end) {
 
             int mid=start+(end-start)/2;
 
-            if(target>arr[mid]) {
+            if(target<arr[mid]) {
                 end=mid-1;
-            }else if(target<arr[mid]){
+            }else if(target>arr[mid]){
                 start=mid+1;
             }else {
                 return mid;
@@ -34,7 +37,7 @@ public class Celining {
 
         }
 
-        return -1;
+        return arr[start];
 
 
     }

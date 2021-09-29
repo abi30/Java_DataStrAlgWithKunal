@@ -1,7 +1,4 @@
 package day_2;
-
-import javax.sql.rowset.spi.SyncResolver;
- 
 public class InfiniteArrayAmazone {
     public static void main(String[] args) {
 

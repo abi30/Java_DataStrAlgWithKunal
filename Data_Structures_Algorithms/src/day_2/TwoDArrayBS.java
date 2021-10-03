@@ -8,17 +8,33 @@ public class TwoDArrayBS {
 		// TODO Auto-generated method stub
 
 		
-		int[][] arr= {{ 1, 3, 5, 7},
-				      { 2, 4, 6, 9},
-				      {10,14,17,21},
-				      {11,15,19,24}
-				      };
-		int target= 19;
+		int[][] arr= {{ 1, 3, 5, 7}};
+		int target= 3;
+		System.out.println(arr.length);
 		System.out.println(Arrays.toString(search(arr,target)));
 	}
 	
 	static int[] search(int[][] arr,int target) {
-		
+
+		if (arr.length==1){
+			int s=0;
+			int e=arr[0].length-1;
+
+			while (s<=e){
+				if(arr[s][e]==target) {
+					return new int[] {s,e};
+				}
+				if(arr[s][e]<target) {
+					s++;
+				}else {
+
+					e--;
+				}
+
+			}
+			return new int[]{-1,-1};
+		}
+
 		int row=0;
 		int col=arr.length-1;
 		

@@ -5,7 +5,7 @@ public class NumberCount {
     public static void main(String[] args) {
 
 
-        int count=factorial(0);
+        int count=factorial(3);
         System.out.println(count);
     }
 

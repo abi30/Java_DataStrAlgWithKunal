@@ -1,14 +1,19 @@
 package day_2;
 
-public class LeetCode33 {
+public class RBS {
 
     public static void main(String[] args) {
-
 
         int[] arr={4,5,6,7,0,1,2};
         int index= search(arr,5);
         System.out.println(index);
     }
+
+static int findPrivot(int[] arr){
+
+
+        return  0;
+}
 
     public static int search(int[] arr, int target) {
 
